@@ -2,7 +2,7 @@ package pokemon;
 
 public class Fushigidane extends Character {
 	private String name = "fushigidane";
-	private int hp = 10;
+	private int hp = 20;
 	private int level = 1;
 		
 //	Fushigidane(String name, int hp, int level) {

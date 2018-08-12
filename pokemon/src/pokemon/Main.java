@@ -1,5 +1,7 @@
 package pokemon;
 
+import java.util.ArrayList;
+
 public class Main {
 	public static void main(String[] args) {
 		System.out.println("Pocketto Monster");
@@ -11,9 +13,16 @@ public class Main {
 		Encounter enc = new Encounter(me, you);
 		enc.encounter();
 		
+		ArrayList<String> zukan = new ArrayList<String>();
+		
+		zukan.add(me.getName());
+		zukan.add(you.getName());
+//		System.out.println(zukan.size());
+
+/*
 		Character[] myZukan = new Character[2];
 		myZukan[0] = me;
-
+*/
 		/*
 		System.out.println(myZukan[0].getName());
 		myZukan[1] = you;
@@ -23,7 +32,7 @@ public class Main {
 		
 //		Jframe("ライチュウ");
 		
-//		new Jframe1();
+		new Jframe1();
 	}
 
 }

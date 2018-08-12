@@ -1,7 +1,7 @@
 package pokemon;
 
 public class Pikachu extends Character {
-	private int hp = 10;
+	private int hp = 20;
 	private int level = 1;
 	
 //	Pikachu(String name, int hp, int level) {

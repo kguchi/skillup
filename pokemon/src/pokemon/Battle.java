@@ -1,6 +1,7 @@
 package pokemon;
 
 import java.util.Scanner;
+import java.util.Random;
 
 public class Battle {	
 	private Character me;
@@ -18,7 +19,8 @@ public class Battle {
 	public void battle(Character me, Character you) {
 		while(true){
 			System.out.println("");
-			System.out.print(turn + "ターン目");
+			System.out.println(turn + "ターン目");
+			System.out.println("あなたの攻撃だ！");
 			System.out.println("どうしますか？");
 			System.out.println("1.電光石火");
 			System.out.println("2.電気ショック");
@@ -48,7 +50,29 @@ public class Battle {
 			if(you.getHp() <= 0) {
 				System.out.println("You won!!");
 				break;
-			} else if(me.getHp() <= 0) {
+			} 
+			
+			System.out.println("");
+			System.out.println("敵の攻撃だ！");
+			
+			Random rand = new Random();
+			int randNum = rand.nextInt(4);
+			switch(randNum) {
+			case 0:
+				c.attack(you, me);
+				break;
+			case 1:
+				c.eleShock(you, me);
+				break;
+			case 2:
+				c.thunder(you, me);
+				break;
+			case 3:
+				c.tenVolt(you, me);
+				break;
+			}
+			
+			if(me.getHp() <= 0) {
 				System.out.println("You lost!!");
 				break;
 			} else {
